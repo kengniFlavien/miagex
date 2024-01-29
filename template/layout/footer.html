@@ -1,0 +1,36 @@
+{% load static %}
+<!-- footer -->
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container padding-def">
+                <div class="row align-items-center">
+                    <div class="col-xl-1 col-lg-1 col-md-12 footer-logo">
+                        <a class="navbar-brand" href="index.html">
+                            <img src='{% static 'images/logo.svg' %}' alt="Project name" class="logo" />
+                            <span>Circle</span>
+                        </a>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12">
+                        <div class="f-links">
+                            <ul class="list-inline">
+                                <li><a href="/">Acceuil</a></li>
+                                <li><a href="{% url 'accounts:login' %}">connexion</a></li>
+                                <li><a href="{% url 'accounts:register' %}">Inscription</a></li>
+                            </ul>
+                        </div>
+                        <div class="delimiter"></div>
+                        <div class="f-copy">
+                            <ul class="list-inline">
+                                <li>
+                                    © 2024 MiageX
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer -->

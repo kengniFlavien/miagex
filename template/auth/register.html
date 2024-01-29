@@ -1,0 +1,55 @@
+{% extends 'layout/app.html' %}
+{% load static %}
+{% block header %}
+    <title>Miagex</title>
+    <style>
+        form input{
+            border-radius: 3px;
+            border: solid 1px #e0e1e2;
+            padding: 15px 18px;
+            width: 100%;
+        }
+        .helptext{
+            display: none;
+        }
+        .errorlist{
+            font-size: 80%;
+            color: red;
+        }
+    </style>
+ {% endblock %}
+{% block content %}
+    <div class="container-fluid bg-image">
+        <div class="row">
+            <div class="login-wraper">
+                <div class="hidden-xs">
+                    <img src="{% static "images/login.png" %}" alt="">
+                </div>
+                <div class="banner-text hidden-xs">
+                    <div class="line"></div>
+                    <div class="b-text">
+                        Regardez des  <span class="color-active">milliers de vidéos  </span> gratuitement.
+                    </div>
+                </div>
+                <div class="login-window">
+                    <div class="l-head">
+                        Création de votre compte MiageX
+                    </div>
+                    <div class="l-form">
+                        <form action="{% url 'accounts:register' %}" method="POST">
+                            {% csrf_token %}
+                            {{ form }}
+                            <div class="row mt-4">
+                                <div class="col-lg-7"><button type="submit" class="btn btn-cv1">S'inscrire</button></div>
+                                <div class="hidden-xs col-lg-5 d-flex">
+                                    <div class="ortext">ou</div>
+                                    <div class="signuptext"><a href="{% url 'accounts:login' %}">Se connecter</a></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

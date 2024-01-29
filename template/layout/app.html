@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.png">
+
+    {% block header %}{% endblock %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <link href="{% static '/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static '/css/font-circle-video.css' %}" rel="stylesheet">
+
+    <!-- font-family: 'Hind', sans-serif; -->
+    <link href='https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700|Hind+Guntur:300,400,500,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="light">
+
+{% include 'layout/header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+{% include 'layout/footer.html' %}
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src={% static 'js/jquery.min.js' %}></script>
+<script src={% static 'js/jquery-migrate-1.4.1.min.js' %}></script>
+<script src={% static 'bootstrap/js/popper.js' %}></script>
+<script src={% static 'bootstrap/js/bootstrap.min.js' %}></script>
+<script src={% static 'bootstrap/js/popper.js' %}></script>
+<script src={% static 'js/custom.js' %}></script>
+
+</body>
+
+</html>
