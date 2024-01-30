@@ -9,6 +9,7 @@ urlpatterns = [
     path('', views.homepage),
     path('admin/', admin.site.urls),
     url(r'^account/',include("accounts.urls") ),
+    url('streaming',include("streaming.urls") ),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
